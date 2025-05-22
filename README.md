@@ -1,4 +1,4 @@
-📚 Fann or Flop: A Multigenre, Multiera Benchmark for Arabic Poetry Understanding
+# 📚 Fann or Flop: A Multigenre, Multiera Benchmark for Arabic Poetry Understanding
 
 Fann or Flop is the first comprehensive benchmark designed to evaluate large language models (LLMs) on their ability to understand Arabic poetry. It contains nearly 7,000 poem-explanation pairs covering 12 poetic eras, 21 genres, and multiple meters, providing a culturally rich and linguistically challenging testbed for Arabic NLP.
 
@@ -111,7 +111,7 @@ The `evaluation/` directory contains scripts to reproduce the benchmark results 
 4.  **Model Prediction Files:** Your model's generated explanations should be in a JSON format. Each file should contain a list of poem objects. Each poem object must include an `"id"` and a key containing a list of verse-explanation pairs (typically `"verse_explanations"`).
 
     **Sample Model Prediction JSON (`your_model_explanations.json`):**
-    ```json
+    ```python
     [
       {
         "id": "poem_5123",
