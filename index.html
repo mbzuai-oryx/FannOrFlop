@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Rethinking Step-by-step Visual Reasoning in LLMs">
+    <meta name="keywords" content="VRC-Bench, Reasoning, VLM, Benchmark, LMM">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fann or Flop: A Multigenre, Multiera Benchmark for Arabic Poetry Understanding</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/leaderboard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/icon.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #content-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        #pie-chart {
+            width: 400px;
+            height: 400px;
+        }
+
+        #image-container {
+            width: 100%;
+            height: 400px;
+        }
+
+        #image-container img {
+            max-width: 80%;
+            height: auto;
+        }
+
+        .chart-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 2000px;
+            margin: 0 auto;
+        }
+
+        .bar-chart {
+            width: 400px;
+            height: 300px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title is-bold">
+                            <img src="static/images/fann_logo.png" style="width:3em;vertical-align: middle" alt="Logo" />
+                            <span class="mmmu" style="vertical-align: middle">Fann or Flop</span>
+                        </h1>
+                        <h2 class="subtitle is-3 publication-subtitle">
+                            A Multigenre, Multiera Benchmark for Arabic Poetry Understanding
+                        </h2>
+                        <div class="is-size-5 publication-authors">
+                            <p>
+                                Wafa Alghallabi<sup style="color:#3399FF;">1,2*</sup>,
+                                Ritesh Thawkar<sup style="color:#3399FF;">1,2*</sup>,
+                                Sara Ghaboura<sup style="color:#3399FF;">2*</sup>,
+                                Ketan More<sup style="color:#3399FF;">1,2*</sup>,
+                                Omkar Thawakar<sup style="color:#3399FF;">1,2*</sup>,
+                                Hisham Cholakkal<sup style="color:#3399FF;">1</sup>,
+                                Salman Khan<sup style="color:#3399FF;">1,2,3 </sup>
+                                Rao Muhammad Anwer<sup style="color:#3399FF;">1,4</sup>,
+                            </p>
+                            <p><em>* Equal Contributions</em></p>
+                            <p>
+                                <sup style="color:#3399FF;">1</sup>Lawa.AI,
+                                <sup style="color:#4CB5AE;">2</sup>Mohamed bin Zayed University of AI,
+                                <sup style="color:#FF66B3;">3</sup>Australian National University,
+                                <sup style="color:#FFA280;">4</sup>Aalto University
+                            </p>
+                        </div>
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- PDF Link. -->
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/pdf/2501.06186"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/abs/2501.06186"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+                                <!-- Code Link. -->
+                                <span class="link-block">
+                                    <a href="https://github.com/mbzuai-oryx/FannOrFlop"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+                                <!-- Dataset Link. -->
+                                <span class="link-block">
+                                    <a href="https://huggingface.co/datasets/omkarthawakar/FannOrFlop"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon" style="font-size:18px">🤗</span>
+                                        <span>Dataset</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop has-text-centered">
+            <img src="static/images/fann_intro.png" alt="time-wheel">
+            <p><i>Chronological Wheel of Arabic Poetic Eras. This circular taxonomy visualizes 
+                the evolution of Arabic poetry across twelve major historical eras, from the 
+                Pre-Islamic and Transitional periods through the Abbasid, Andalusian, and Mamluk 
+                dynasties, up to the Modern and Contemporary era. The layout reflects both temporal 
+                flow and the rich cultural shifts that shaped poetic expression.</i></p>
+            <br>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- News -->
+            <div class="columns is-centered">
+                <div class="column is-full has-text-centered">
+                    <h2 class="title is-3" style="display: inline-flex; align-items: center; justify-content: center;">
+                        <span class="icon" style="margin-right: 8px;">
+                            <img src="static/images/bell.png" alt="News Icon" style="width: 24px; height: 24px;">
+                        </span>
+                        News
+                    </h2>
+                    <p style="font-size: 18px;">
+                        <strong>[2025-05-23]</strong>: Our FannOrFlop is now available on <a
+                            href="https://huggingface.co/datasets/omkarthawakar/FannOrFlop">HuggingFace</a>.
+                        We welcome all contributions and look forward to your participation!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Arabic poetry stands as one of the most sophisticated and culturally embedded forms of 
+                            expression in the Arabic language, known for its layered meanings, stylistic diversity, 
+                            and deep historical continuity. Although large language models (LLMs) have demonstrated 
+                            strong performance across languages and tasks, their ability to understand Arabic poetry 
+                            remains largely unexplored. In this work, we introduce \emph{Fann or Flop}, the first 
+                            benchmark designed to assess the comprehension of Arabic poetry by LLMs in twelve historical 
+                            eras, covering 21 core poetic genres and a variety of metrical forms, from classical structures 
+                            to contemporary free verse. The benchmark comprises a curated corpus of poems with explanations 
+                            that assess semantic understanding, metaphor interpretation, prosodic awareness, and 
+                            cultural context. We argue that poetic comprehension offers a strong indicator for 
+                            testing how good the LLM is in understanding classical Arabic through the Arabic poetry. 
+                            Unlike surface-level tasks, this domain demands deeper interpretive reasoning and cultural 
+                            sensitivity. Our evaluation of state-of-the-art LLMs shows that most models struggle with 
+                            poetic understanding despite strong results on standard Arabic benchmarks. 
+                            We release \emph{Fann or Flop} along with the evaluation suite as an open-source resource to 
+                            enable rigorous evaluation and advancement for Arabic language models.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Abstract. -->
+
+    </section>
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop has-text-centered">
+            <img src="static/images/fann_pipeline.png" alt="Teaser Figure" style="width: 100%; height: auto;" />
+            <p><i><b>Fann or Flop Pipeline.</b> Fann or Flop is built out of the multi-stage pipeline. It begins with scraping Arabic poems
+                from a trusted online archive using a custom web scraper. Extracted poems are matched to an initial expert-verified taxonomy
+                and filtered to remove duplicates, ambiguous metadata, and invalid entries. The filtered texts then undergo normalization
+                (e.g., unifying diacritics, punctuation, and letter forms) and Arabic-specific tokenization, with non-poetic or irrelevant content
+                excluded. Manual corrections are applied to fix OCR and encoding errors. In the final stage, linguistic experts verify
+                each sample to ensure proper alignment with genre and era labels.</i></p>
+        </div>
+    </section>
+
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop has-text-centered">
+            <img src="static/images/fann_stat.png" alt="Teaser Figure" style="width: 100%; height: auto;" />
+            <p><i><b>Left</b>Distribution of poems by historical era. The chart shows the proportion of poems collected from each era. 
+                Abbasid, Modern,  and Andalusian periods are the most represented, reflecting their central role in Arabic literary production.
+                <b>Right.</b> Distribution of poems by genre. This chart shows the proportion of poetic genres across the dataset. 
+                Praise, Satire, and Love dominate the distribution, while genres such as Apology and Sadness appear less frequently.
+            </i></p>
+        </div>
+    </section>
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop has-text-centered">
+            <img src="static/images/fann_genre_ear.png" alt="Teaser Figure" style="width: 100%; height: auto;" />
+            <p><i>Genre distribution across historical eras. This stacked bar chart illustrates how poetic themes evolved across different dynasties. 
+                It highlights patterns such as the prominence of Praise and Satire during the Abbasid and Umayyad eras, 
+                and the diverse thematic expression in Modern poetry.</i></p>
+        </div>
+    </section>
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop has-text-centered">
+            <img src="static/images/samples.png" alt="Teaser Figure" style="width: 100%; height: auto;" />
+            <p><i>Fann or Flop Samples by Genre. Additional representative examples from the Fann or Flop benchmark, illustrating the diversity 
+                of genres covered, including Love (Ghazal), Praise (Madḥ), Wisdom (Hikma), Satire (Hijā’), Elegy (Rithā’), Reproach ('Itāb), 
+                Political Poetry, and Longing (Shawq). Each example showcases a poetic excerpt alongside an interpretive breakdown highlighting 
+                figurative language, rhetorical devices, and thematic nuances. These curated samples reflect the benchmark’s aim to evaluate models’ 
+                nuanced understanding of Arabic poetic tradition.</i></p>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-full has-text-centered content">
+                    <h2 class="title is-3" id="leaderboard">Leaderboard on Fann Or Flop</h2>
+                    <div class="content">
+                        <p class="mt-3">Performance comparison of different closed-and open-source LLMs on <img
+                                src="static/images/fann_logo.png" style="width:3.0em;vertical-align: middle" alt="Logo" />
+                            <span class="mathvista">FannOrFlop</span>.
+                        </p>
+                        
+                        <table style="border-collapse: collapse; width: 100%; text-align: center;">
+                            <thead>
+                              <tr>
+                                <th style="border: 1px solid #ddd; padding: 8px;"><strong>Model</strong></th>
+                                <th style="border: 1px solid #ddd; padding: 8px;"><strong>BLEU</strong></th>
+                                <th style="border: 1px solid #ddd; padding: 8px;"><strong>chrF(++)</strong></th>
+                                <th style="border: 1px solid #ddd; padding: 8px;"><strong>BERTScore</strong></th>
+                                <th style="border: 1px solid #ddd; padding: 8px;"><strong>Textual Entailment</strong></th>
+                                <th style="border: 1px solid #ddd; padding: 8px;"><strong>Faithfulness / Consistency</strong></th>
+                                <th style="border: 1px solid #ddd; padding: 8px;"><strong>Fluency / Grammaticality</strong></th>
+                                <th style="border: 1px solid #ddd; padding: 8px;"><strong>Interpretive Depth</strong></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr><td colspan="8"><strong>Closed Models</strong></td></tr>
+                              <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">GPT-4o-2024-08-06 (OpenAI, 2024)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.0395</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;"><strong>0.2882</strong></td>
+                                <td style="border: 1px solid #ddd; padding: 8px;"><strong>0.6410</strong></td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.6775</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">3.92 (± 0.99)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;"><strong>4.96 (± 0.20)</strong></td>
+                                <td style="border: 1px solid #ddd; padding: 8px;"><strong>7.52</strong></td>
+                              </tr>
+                              <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">GPT-4o-mini-2024-07-18 (OpenAI, 2024)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.0395</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.2542</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.6124</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.4383</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">2.91 (± 0.75)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">4.28 (± 0.57)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">7.50</td>
+                              </tr>
+                              <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">Gemini-2.5-Flash (AI, 2025b)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.0153</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.2618</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.6319</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;"><strong>0.7475</strong></td>
+                                <td style="border: 1px solid #ddd; padding: 8px;"><strong>4.25 (± 1.00)</strong></td>
+                                <td style="border: 1px solid #ddd; padding: 8px;"><strong>4.98 (± 0.16)</strong></td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">7.22</td>
+                              </tr>
+                              <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">Gemini-2.0-Flash (AI, 2025a)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.0395</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.2618</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.6393</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.7154</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">3.99 (± 1.04)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">4.95 (± 0.22)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">6.50</td>
+                              </tr>
+                              <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">Gemini-1.5-Pro (Reid et al., 2024)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.0395</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.2618</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.6333</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.6180</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">3.59 (± 1.00)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">4.80 (± 0.41)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">5.38</td>
+                              </tr>
+                              <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">Fanar-Star (Team et al., 2025)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.0138</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.1538</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.5677</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.6468</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">2.16 (± 0.92)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">3.40 (± 0.76)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">2.88</td>
+                              </tr>
+                              <tr><td colspan="8"><strong>Open Models</strong></td></tr>
+                              <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">Deepseek-V3 (Liu et al., 2024)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.0395</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.2771</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.6335</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.5117</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">3.36 (± 0.91)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;"><strong>4.98 (± 0.16)</strong></td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">4.75</td>
+                              </tr>
+                              <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">Deepseek-R1 (Guo et al., 2025)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.0395</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.2771</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.6335</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.5117</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">3.38 (± 0.92)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;"><strong>4.98 (± 0.16)</strong></td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">4.25</td>
+                              </tr>
+                              <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">Llama-3.3-70B (Meta AI, 2024)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.0153</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.2618</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.6393</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.5364</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">2.51 (± 0.90)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">3.37 (± 0.73)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">7.20</td>
+                              </tr>
+                              <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">Qwen-3 (Team, 2025)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.0296</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;"><strong>0.2837</strong></td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.6158</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.6468</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">3.98 (± 0.90)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">4.73 (± 0.45)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">6.50</td>
+                              </tr>
+                              <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">Aya-Expanse (Dang et al., 2024)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.0329</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.2771</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.6328</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.6468</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">3.76 (± 0.90)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">4.68 (± 0.47)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">5.88</td>
+                              </tr>
+                              <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">Jais (Sengupta et al., 2023)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.0312</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.2698</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.6245</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.6023</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">3.21 (± 0.88)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">4.35 (± 0.52)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">5.35</td>
+                              </tr>
+                              <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">ALLaM-7B (Bari et al., 2024)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.0119</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.0463</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.5375</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.5997</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">1.32 (± 0.62)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">2.11 (± 0.89)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">3.12</td>
+                              </tr>
+                              <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">AceGPT-v2-70B-Chat (Huang et al., 2023)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;"><strong>0.0402</strong></td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.0412</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.5759</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">0.6061</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">2.52 (± 0.91)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">3.46 (± 0.95)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">4.12</td>
+                              </tr>
+                            </tbody>
+                        </table>                       
+                          
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title is-3 has-text-centered">BibTeX</h2>
+            <pre><code>@article{fannorflop,
+            title = {Fann or Flop: A Multigenre, Multiera Benchmark for Arabic Poetry Understanding},
+            author = {Alghallabi, Wafa and Thawkar, Ritesh and Ghaboura, Sara and More, Ketan and Thawakar, Omkar and Cholakkal, Hisham and Khan, Salman and Anwer, Rao Muhammad},
+            journal = {arXiv preprint arXiv:xxxx.xxxx},
+            year = {2025},
+            url = {https://arxiv.org/abs/xxxx.xxxx}
+}</code></pre>
+        </div>
+    </section>
+
+    <section>
+        <div class="section" id="org-banners" style="display:flex">
+          <a href="https://mbzuai.ac.ae/" target="_blank" rel="external">
+              <img class="center-block org-banner" src="static/images/lawa-logo.png">
+          </a>
+          <a href="https://www.ucf.edu/" target="blank" class="ext-link">
+              <img class="center-block org-banner" src="static/images/mbzuai_logo.png">
+          </a>
+          <a href="https://liu.se/en" target="_blank" rel="external">
+              <img class="center-block org-banner" src="static/images/anu_logo.png">
+          </a>
+          <a href="https://www.anu.edu.au/" target="_blank" rel="external">
+            <img class="center-block org-banner" src="static/images/aalto-logo.png">
+        </a>
+        </div>
+      </section>
+
+
+
+    <footer class="footer">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a
+                            href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license"
+                            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                            Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
