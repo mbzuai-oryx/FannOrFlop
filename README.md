@@ -1,8 +1,32 @@
 # 📚 Fann or Flop: A Multigenre, Multiera Benchmark for Arabic Poetry Understanding
 
+<div  align="center" style="margin-top:10px;"> 
+    
+  [Wafa Alghallabi](https://huggingface.co/SLMLAH) <sup> * </sup> &nbsp;
+  [Ritesh Thawkar](https://in.linkedin.com/in/ritesh-thawkar-b13192233) <sup> * </sup> &nbsp;
+  [Sara Ghaboura](https://huggingface.co/SLMLAH) <sup> * </sup> &nbsp;
+  [Ketan More](https://scholar.google.com/citations?user=FCgQeoYAAAAJ&hl=en) <sup> * </sup> &nbsp;
+  [Omkar Thawakar](https://scholar.google.com/citations?user=flvl5YQAAAAJ&hl=en) <sup> * </sup>  &nbsp;
+  <br>
+  [Hisham Cholakkal](https://scholar.google.com/citations?hl=en&user=bZ3YBRcAAAAJ) &nbsp;
+  [Salman Khan](https://scholar.google.com/citations?hl=en&user=M59O9lkAAAAJ) &nbsp;
+  [Rao M. Anwer](https://scholar.google.com/citations?hl=en&user=_KlvMVoAAAAJ)
+  <br>
+  <br>  
+  [![arXiv](https://img.shields.io/badge/arXiv-2502.14865-F6D769)](https://arxiv.org/abs/xxxx.xxxx)
+  [![Our Page](https://img.shields.io/badge/Visit-Our%20Page-E7DAB7?style=flat)](https://mbzuai-oryx.github.io/FannOrFlop/)
+  [![GitHub issues](https://img.shields.io/github/issues/mbzuai-oryx/Camel-Bench?color=E5D5C1&label=issues&style=flat)](https://github.com/mbzuai-oryx/FannOrFlop/issues)
+  [![GitHub stars](https://img.shields.io/github/stars/mbzuai-oryx/TimeTravel?color=FAF1D9&style=flat)](https://github.com/mbzuai-oryx/FannOrFlop/stargazers)
+  [![GitHub license](https://img.shields.io/github/license/mbzuai-oryx/Camel-Bench?color=F1E9E3)](https://github.com/mbzuai-oryx/FannOrFlop/blob/main/LICENSE)
+  <br>
+  <em> <sup> *Equal Contribution  </sup> </em>
+  <br>
+  <br>
+</div>
+
 Fann or Flop is the first comprehensive benchmark designed to evaluate large language models (LLMs) on their ability to understand Arabic poetry. It contains nearly 7,000 poem-explanation pairs covering 12 poetic eras, 21 genres, and multiple meters, providing a culturally rich and linguistically challenging testbed for Arabic NLP.
 
-> 📝 Arxiv Preprint: [Fann or Flop: A Multigenre, Multiera Benchmark for Arabic Poetry Understanding in LLMs (ACL 2025 Submission)](https://arxiv.org/abs/XXXX.XXXXX)  
+> 📝 Arxiv Preprint: [Fann or Flop: A Multigenre, Multiera Benchmark for Arabic Poetry Understanding in LLMs](https://arxiv.org/abs/XXXX.XXXXX)  
 > 📂 Dataset hosted on: [Hugging Face](https://huggingface.co/datasets/omkarthawakar/FannOrFlop)
 
 ---
