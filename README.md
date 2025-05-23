@@ -1,7 +1,7 @@
 
 
 <div style="margin-top:50px;">
-  <h1 style="font-size: 30px; margin: 0;">  📚 AFann or Flop: A Multigenre, Multiera Benchmark for Arabic Poetry Understanding
+  <h1 style="font-size: 30px; margin: 0;">  📚 Fann or Flop: A Multigenre, Multiera Benchmark for Arabic Poetry Understanding
 </h1>
 </div>
 
