@@ -1,9 +1,7 @@
 
-
-<div style="margin-top:50px;">
-  <h1 style="font-size: 30px; margin: 0;">  📚 Fann or Flop: A Multigenre, Multiera Benchmark for Arabic Poetry Understanding
-</h1>
-</div>
+ <img src='static/fann_logo.png' align="left" width="16%" />
+ <div style="margin-top:50px;">
+      <h1 style="font-size: 30px; margin: 0;"> Fann or Flop: A Multigenre, Multiera Benchmark for Arabic Poetry Understanding</h1>
 
 
 <div  align="center" style="margin-top:10px;"> 
@@ -265,16 +263,22 @@ All commands below assume you are in the `evaluation/` directory.
 ## 📊 Leaderboard (Sample Results)
 
 
+### Open-Source Models
+
 | **Model**                               | **BLEU**   | **chrF(++)** | **BERTScore** | **Textual Entailment** | **Faithfulness / Consistency** | **Fluency / Grammaticality** | **Interpretive Depth** |
 | --------------------------------------- | ---------- | ------------ | ------------- | ---------------------- | ------------------------------ | ---------------------------- | ---------------------- |
-| **Closed Models**                       |            |              |               |                        |                                |                              |                        |
 | GPT-4o-2024-08-06 (OpenAI, 2024)        | 0.0395     | **0.2882**   | **0.6410**    | 0.6775                 | 3.92 (± 0.99)                  | **4.96 (± 0.20)**            | **7.52**               |
 | GPT-4o-mini-2024-07-18 (OpenAI, 2024)   | 0.0395     | 0.2542       | 0.6124        | 0.4383                 | 2.91 (± 0.75)                  | 4.28 (± 0.57)                | 7.50                   |
 | Gemini-2.5-Flash (AI, 2025b)            | 0.0153     | 0.2618       | 0.6319        | **0.7475**             | **4.25 (± 1.00)**              | **4.98 (± 0.16)**            | 7.22                   |
 | Gemini-2.0-Flash (AI, 2025a)            | 0.0395     | 0.2618       | 0.6393        | 0.7154                 | 3.99 (± 1.04)                  | 4.95 (± 0.22)                | 6.50                   |
 | Gemini-1.5-Pro (Reid et al., 2024)      | 0.0395     | 0.2618       | 0.6333        | 0.6180                 | 3.59 (± 1.00)                  | 4.80 (± 0.41)                | 5.38                   |
-| Fanar-Star (Team et al., 2025)          | 0.0138     | 0.1538       | 0.5677        | 0.6468                 | 2.16 (± 0.92)                  | 3.40 (± 0.76)                | 2.88                   |
-| **Open Models**                         |            |              |               |                        |                                |                              |                        |
+| Fanar-Star (Team et al., 2025)          | 0.0138     | 0.1538       | 0.5677        | 0.6468                 | 2.16 (± 0.92)                  | 3.40 (± 0.76)                | 2.88            
+
+
+### Open-Source Models
+
+| **Model**                               | **BLEU**   | **chrF(++)** | **BERTScore** | **Textual Entailment** | **Faithfulness / Consistency** | **Fluency / Grammaticality** | **Interpretive Depth** |
+| --------------------------------------- | ---------- | ------------ | ------------- | ---------------------- | ------------------------------ | ---------------------------- | ---------------------- |    
 | Deepseek-V3 (Liu et al., 2024)          | 0.0395     | 0.2771       | 0.6335        | 0.5117                 | 3.36 (± 0.91)                  | **4.98 (± 0.16)**            | 4.75                   |
 | Deepseek-R1 (Guo et al., 2025)          | 0.0395     | 0.2771       | 0.6335        | 0.5117                 | 3.38 (± 0.92)                  | **4.98 (± 0.16)**            | 4.25                   |
 | Llama-3.3-70B (Meta AI, 2024)           | 0.0153     | 0.2618       | 0.6393        | 0.5364                 | 2.51 (± 0.90)                  | 3.37 (± 0.73)                | 7.20                   |
