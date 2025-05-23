@@ -6,7 +6,7 @@
 
 <div  align="center" style="margin-top:10px;"> 
     
-  [Wafa Alghallabi](https://huggingface.co/SLMLAH) <sup> * </sup> &nbsp;
+  [Wafa Alghallabi](https://scholar.google.com/citations?user=m0ez8X8AAAAJ&hl=ar&oi=sra) <sup> * </sup> &nbsp;
   [Ritesh Thawkar](https://in.linkedin.com/in/ritesh-thawkar-b13192233) <sup> * </sup> &nbsp;
   [Sara Ghaboura](https://huggingface.co/SLMLAH) <sup> * </sup> &nbsp;
   [Ketan More](https://scholar.google.com/citations?user=FCgQeoYAAAAJ&hl=en) <sup> * </sup> &nbsp;
