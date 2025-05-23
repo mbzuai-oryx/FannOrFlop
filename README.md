@@ -302,7 +302,6 @@ All commands below assume you are in the `evaluation/` directory.
 
 
 <br>
-<br>
 
 ##  <img src="https://github.com/user-attachments/assets/5cde3d6d-8c24-496a-84a7-1e753d895438" width="35" height="35" /> Leaderboard (Sample Results)
 
@@ -333,6 +332,8 @@ All commands below assume you are in the `evaluation/` directory.
 | AceGPT-v2-70B-Chat (Huang et al., 2023) | **0.0402** | 0.0412       | 0.5759        | 0.6061                 | 2.52 (± 0.91)                  | 3.46 (± 0.95)                | 4.12                   |
 
 ---
+
+<br>
 
 ## 💬 Citation
 
