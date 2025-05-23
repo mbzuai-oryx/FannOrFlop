@@ -28,24 +28,33 @@
   <br>
 </div>
 
+
+## <img src="https://github.com/user-attachments/assets/15310a30-6354-4264-871c-065161005dc4" width="40" height="40" /> Fann Or Flop?
 Fann or Flop is the first comprehensive benchmark designed to evaluate large language models (LLMs) on their ability to understand Arabic poetry. It contains nearly 7,000 poem-explanation pairs covering 12 poetic eras, 21 genres, and multiple meters, providing a culturally rich and linguistically challenging testbed for Arabic NLP.
 
-> 📝 Arxiv Preprint: [Fann or Flop: A Multigenre, Multiera Benchmark for Arabic Poetry Understanding in LLMs](https://arxiv.org/abs/XXXX.XXXXX)  
-> 📂 Dataset hosted on: [Hugging Face](https://huggingface.co/datasets/omkarthawakar/FannOrFlop)
-
 ---
+<br>
+<br>
+
+##  <img src="https://github.com/user-attachments/assets/1abcf195-ad44-4500-a14b-f1a4bef9b748" width="30" height="30" />Latest Updates
+ 🔥  **[26 May 2025]** Fann or Flop the **1<sup>st</sup>** benchmark for assessing the LLM's ability to comprehend and analyze Arabic poetry is released.<br>
+ 🤗  **[19 Feb 2025]** Fann or Flop  dataset available on [Hugging Face](https://huggingface.co/datasets/omkarthawakar/FannOrFlop).<br>
+
+<br>
+<br>
 
 ## ✨ Key Features
 
-- ✅ **Expert-Annotated Explanations:** Verse-level commentary verified by native Arabic scholars.
-- 🏛️ **12 Historical Eras:** From Pre-Islamic and Umayyad to Modern poetry.
-- 🧠 **Multi-Dimensional Evaluation:** Faithfulness, fluency, metaphor, historical context, and rhetorical awareness.
-- 🧾 **Structured Taxonomy:** Each poem tagged with `meter`, `genre`, and `era`.
-- 💬 **QA-Style Format:** Ideal for generative and comprehension-based evaluation in LLMs.
+- **Expert-Annotated Explanations:** Verse-level commentary verified by native Arabic scholars.
+- **12 Historical Eras:** From Pre-Islamic and Umayyad to Modern poetry.
+- **Multi-Dimensional Evaluation:** Faithfulness, fluency, metaphor, historical context, and rhetorical awareness.
+- **Structured Taxonomy:** Each poem tagged with `meter`, `genre`, and `era`.
+- **QA-Style Format:** Ideal for generative and comprehension-based evaluation in LLMs.
 
----
+<br>
+<br>
 
-## 📦 Dataset Structure
+## <img src="https://github.com/user-attachments/assets/b6b31787-bc46-4016-a95c-e3234defffb1" width="40" height="40" /> Dataset Structure
 
 Each JSON entry is structured as follows:
 
@@ -64,9 +73,9 @@ Each JSON entry is structured as follows:
 | `explanation`    | `list[dict]` | Verse-wise explanation with fields: `verse`, `explanation`                 |
 | `raw_explanation`| `string`     | Full explanation in paragraph format                                        |
 
-> Sample entries are available in the [`samples/`](samples/) folder.
 
----
+<img src="https://github.com/user-attachments/assets/8a412501-ff8a-4f06-8514-84fc1b8a6375" width="40" height="40" /> Sample entries are available in the [`samples/`](samples/) folder.
+
 
 ## 🌍 Taxonomy Overview
 
