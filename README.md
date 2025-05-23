@@ -36,7 +36,7 @@ Fann or Flop is the first comprehensive benchmark designed to evaluate large lan
 <br>
 <br>
 
-##  <img src="https://github.com/user-attachments/assets/1abcf195-ad44-4500-a14b-f1a4bef9b748" width="30" height="30" />Latest Updates
+##  <img src="https://github.com/user-attachments/assets/1abcf195-ad44-4500-a14b-f1a4bef9b748" width="40" height="40" />Latest Updates
  🔥  **[26 May 2025]** Fann or Flop the **1<sup>st</sup>** benchmark for assessing the LLM's ability to comprehend and analyze Arabic poetry is released.<br>
  🤗  **[19 Feb 2025]** Fann or Flop  dataset available on [Hugging Face](https://huggingface.co/datasets/omkarthawakar/FannOrFlop).<br>
 
@@ -54,7 +54,7 @@ Fann or Flop is the first comprehensive benchmark designed to evaluate large lan
 <br>
 <br>
 
-## <img src="https://github.com/user-attachments/assets/b6b31787-bc46-4016-a95c-e3234defffb1" width="40" height="40" /> Dataset Structure
+## <img src="https://github.com/user-attachments/assets/66c81996-e6da-490e-98ff-96e0a5696d22" width="40" height="40" /> Dataset Structure
 
 Each JSON entry is structured as follows:
 
@@ -76,8 +76,11 @@ Each JSON entry is structured as follows:
 
 <img src="https://github.com/user-attachments/assets/8a412501-ff8a-4f06-8514-84fc1b8a6375" width="40" height="40" /> Sample entries are available in the [`samples/`](samples/) folder.
 
+<br>
+<br>
 
-## 🌍 Taxonomy Overview
+
+## <img src="https://github.com/user-attachments/assets/b6b31787-bc46-4016-a95c-e3234defffb1" width="40" height="40" /> Taxonomy Overview
 
 The dataset spans 12 major **Arabic poetic eras**:
 
@@ -92,9 +95,26 @@ The dataset spans 12 major **Arabic poetic eras**:
 
 Each poem is assigned its literary context through expert-verified metadata.
 
----
+<br>
+<br>
 
-## 🧪 Evaluation Protocol
+## <img src="https://github.com/user-attachments/assets/c0371829-dedd-48b7-90e1-1b9597777f2d" width="40" height="40" /> Fann Or Flop Pipeline
+<p align="center">
+   <img src="static/fann_pipeline.png" width="2600px" height="300px" alt="pipeline"  style="margin-right: 2px";/>
+    <h6>
+     <b>Figure 2. Fann or Flop Pipeline. </b> Fann or Flop is built out of the multi-stage pipeline. It begins with scraping
+Arabic poems from a trusted online archive using a custom web scraper. Extracted poems are matched to an
+initial expert-verified taxonomy and filtered to remove duplicates, ambiguous metadata, and invalid entries. The
+filtered texts then undergo normalization (e.g., unifying diacritics, punctuation, and letter forms) and Arabic-specific
+tokenization, with non-poetic or irrelevant content excluded. Manual corrections are applied to fix OCR and
+encoding errors. In the final stage, linguistic experts verify each sample to ensure proper alignment with genre and
+era labels. 
+    </h6>
+
+<br>
+<br>
+
+## <img src="https://github.com/user-attachments/assets/df9cdf7e-62f0-4fa6-82d2-32bd2ca999a7" width="30" height="30" />  Evaluation Protocol
 
 We provide an evaluation framework using:
 
@@ -117,9 +137,10 @@ We provide an evaluation framework using:
         - Literary Devices (0–3)
         - Expressiveness / Coherence (0–2)
 
----
+<br>
+<br>
 
-## 📥 Download
+## <img src="https://github.com/user-attachments/assets/52fae704-e840-4a26-8459-af5e7c4c6418" width="25" height="25" /> Download
 
 ```bash
 from datasets import load_dataset
@@ -127,8 +148,10 @@ from datasets import load_dataset
 # Login using e.g. `huggingface-cli login` to access this dataset
 ds = load_dataset("omkarthawakar/FannOrFlop")
 ```
+<br>
+<br>
 
-## 🧪 Evaluation Suit
+## <img src="https://github.com/user-attachments/assets/dc8738eb-1981-48e9-8fe7-32a15871c018" width="35" height="35" /> Evaluation Suit
 The `evaluation/` directory contains scripts to reproduce the benchmark results and evaluate your own models. 
 
 ### General Setup
@@ -169,6 +192,7 @@ The `evaluation/` directory contains scripts to reproduce the benchmark results 
       // ... more poems
     ]
     ```
+<br>
 
 ### Running Evaluation Scripts
 
@@ -190,6 +214,7 @@ All commands below assume you are in the `evaluation/` directory.
     python bertscore.py
     ```
 *   **Output:** Prints macro-averaged Precision, Recall, and F1-score to the console.
+<br>
 
 **2. BLEU (`bleu.py`)**
 
@@ -206,6 +231,7 @@ All commands below assume you are in the `evaluation/` directory.
     python bleu.py
     ```
 *   **Output:** Prints macro-averaged BLEU, Coverage, and BLEU*Coverage to the console.
+<br>
 
 **3. chrF Score (`chrf_score.py`)**
 
@@ -216,6 +242,8 @@ All commands below assume you are in the `evaluation/` directory.
     python chrf_score.py
     ```
 *   **Output:** Prints macro-averaged chrF, Coverage, and chrF*Coverage to the console.
+
+<br>
 
 **4. LLM-as-Judge Evaluation (`judge_eval.py`)**
 
@@ -235,6 +263,8 @@ All commands below assume you are in the `evaluation/` directory.
     ```
 *   **Output:** Saves detailed scores to a JSON file in the `judge_results/` directory (e.g., `judge_results/YourModelName-results.json`) and prints progress.
 
+<br>
+
 **5. Average LLM Judge Scores (`get_average_scores_for_llm_judge.py`)**
 
 *   **Purpose:** Calculates average and standard deviation for scores generated by `judge_eval.py`.
@@ -244,6 +274,8 @@ All commands below assume you are in the `evaluation/` directory.
     python get_average_scores_for_llm_judge.py
     ```
 *   **Output:** Prints average Faithfulness and Fluency scores (with SD) to the console for each model found in `judge_results/`.
+
+<br>
 
 **6. Textual Entailment (`text_entailment.py`)**
 
@@ -269,8 +301,10 @@ All commands below assume you are in the `evaluation/` directory.
 *   **Output:** Saves detailed JSON results per model in subdirectories of `base_output_dir`. Prints overall summary scores to the console.
 
 
-## 📊 Leaderboard (Sample Results)
+<br>
+<br>
 
+##  <img src="https://github.com/user-attachments/assets/5cde3d6d-8c24-496a-84a7-1e753d895438" width="35" height="35" /> Leaderboard (Sample Results)
 
 ### Open-Source Models
 
@@ -283,6 +317,7 @@ All commands below assume you are in the `evaluation/` directory.
 | Gemini-1.5-Pro (Reid et al., 2024)      | 0.0395     | 0.2618       | 0.6333        | 0.6180                 | 3.59 (± 1.00)                  | 4.80 (± 0.41)                | 5.38                   |
 | Fanar-Star (Team et al., 2025)          | 0.0138     | 0.1538       | 0.5677        | 0.6468                 | 2.16 (± 0.92)                  | 3.40 (± 0.76)                | 2.88            
 
+<br>
 
 ### Open-Source Models
 
@@ -299,7 +334,7 @@ All commands below assume you are in the `evaluation/` directory.
 
 ---
 
-💬 Citation
+## 💬 Citation
 
 Coming soon!
 
