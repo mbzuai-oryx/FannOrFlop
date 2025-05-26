@@ -334,9 +334,23 @@ All commands below assume you are in the `evaluation/` directory.
 ---
 
 <br>
+<div align="left">
 
 ## 💬 Citation
 
-Coming soon!
+If you use ARB dataset in your research, please consider citing:
 
+```bibtex
+@misc{alghallabi2025fannflopmultigenremultiera,
+      title={Fann or Flop: A Multigenre, Multiera Benchmark for Arabic Poetry Understanding in LLMs}, 
+      author={Wafa Alghallabi and Ritesh Thawkar and Sara Ghaboura and Ketan More and Omkar Thawakar and Hisham Cholakkal and Salman Khan and Rao Muhammad Anwer},
+      year={2025},
+      eprint={2505.18152},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.18152}, 
+}
+```
+
+</div>
 
