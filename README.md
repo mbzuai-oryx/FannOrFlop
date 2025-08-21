@@ -1,7 +1,7 @@
 
  <img src='static/fann_logo.png' align="left" width="16%" />
  <div style="margin-top:50px;">
-      <h1 style="font-size: 30px; margin: 0;"> Fann or Flop: A Multigenre, Multiera Benchmark for Arabic Poetry Understanding</h1>
+      <h1 style="font-size: 30px; margin: 0;"> Fann or Flop: A Multigenre, Multiera Benchmark for Arabic Poetry Understanding [🔥 EMNLP-2025 (Main)] </h1>
 
 
 <div  align="center" style="margin-top:10px;"> 
