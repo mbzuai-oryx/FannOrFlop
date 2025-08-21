@@ -37,7 +37,7 @@ Fann or Flop is the first comprehensive benchmark designed to evaluate large lan
 <br>
 
 ##  <img src="https://github.com/user-attachments/assets/1abcf195-ad44-4500-a14b-f1a4bef9b748" width="40" height="40" />Latest Updates
-🔥🔥 **[20 Aug 2025]** 🔥🔥 Fann or Flop accepted to EMNLP 2025 main track.
+🔥🔥 **[20 Aug 2025]** 🔥🔥 Fann or Flop accepted to EMNLP 2025 main track.<br>
  🔥  **[26 May 2025]** Fann or Flop the **1<sup>st</sup>** benchmark for assessing the LLM's ability to comprehend and analyze Arabic poetry is released.<br>
  🤗  **[19 Feb 2025]** Fann or Flop  dataset available on [Hugging Face](https://huggingface.co/datasets/omkarthawakar/FannOrFlop).<br>
 
